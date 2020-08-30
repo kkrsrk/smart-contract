@@ -1,0 +1,21 @@
+pragma solidity 0.4.22 <= 0.6.12;
+
+contract Amulmilk{
+
+    string Name;
+    string coustomers;
+    int  milksold;
+    string  year;
+    
+    
+    function Amulmilk(string newName, string newCoustomers, int newMilksold, string newYear)public{
+        Name=newName;
+        coustomers=newCoustomers;
+        milksold=newMilksold;
+        year=newYear;
+    }
+    
+    function getAmulmilk()public view returns(string, string, int, string){
+        return(Name, coustomers, milksold, year);
+    }
+}
