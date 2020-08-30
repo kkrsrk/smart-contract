@@ -1,0 +1,33 @@
+pragma solidity 0.4.22 <= 0.6.12;
+
+contract Anualreportcard {
+
+    string Name;
+    string studentId;
+    int    english;
+    int    maths;
+    int    science;
+    int    biology;
+    string totalmarks;
+    string  year;
+
+     function Anualreportcard(string newName, string newStudentId, int newEnglish, int newMaths, int newScience, int newBiology, string newTotalmarks, string newYear) public{
+         
+        Name=newName;
+        studentId=newStudentId;
+        english=newEnglish;
+        maths=newMaths;
+        science=newScience;
+        biology=newBiology;
+        totalmarks=newTotalmarks;
+        year=newYear;
+         
+     } 
+     
+     function getAnualreportcard()public view returns(string, string, int, int, int, int, string, string){
+         return(Name, studentId, english, maths, science, biology, totalmarks, year);
+         
+     }
+ 
+         
+}
